@@ -32,21 +32,40 @@ Develop a full-stack RESTful API to manage a library's book catalog and borrowin
 
 ---
 
-## 🗂️ Project Structure
-
+📂 Project Folder Structure
+The project follows a clean and organized folder structure for easy scalability and maintenance:
+```
 src/
-├── model/
-│ ├── Book.model.ts
-│ ├── Borrow.model.ts
-├── routes/
-│ ├── book.routes.ts
-│ ├── borrow.routes.ts
-├── controllers/
-├── middlewares/
-├── App.ts
-├── server.ts
+├── model/              # Mongoose models (database schemas)
+│   ├── Book.model.ts       # Book Schema
+│   ├── Borrow.model.ts     # Borrow Schema
+│
+├── routes/             # API route definitions
+│   ├── book.routes.ts      # Routes for book-related operations
+│   ├── borrow.routes.ts    # Routes for borrow-related operations
+│
+├── controllers/        # Controllers to handle request logic
+│
+├── middlewares/        # Custom middlewares (error handling, auth, etc.)
+│
+├── App.ts              # Main application setup (Express configuration)
+├── server.ts           # Entry point to start the server
+```
+📌 Notes:
 
- 
+✅ Each folder has a clear responsibility to maintain project modularity.
+
+✅ Models handle data structure with Mongoose.
+
+✅ Routes define API endpoints separately.
+
+✅ Controllers manage business logic.
+
+✅ Middlewares ensure better request/response management.
+
+✅ App.ts configures Express app and middlewares.
+
+✅ server.ts starts the server.
 
 ---
 
